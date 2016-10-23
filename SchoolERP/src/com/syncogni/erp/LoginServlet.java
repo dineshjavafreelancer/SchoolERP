@@ -42,8 +42,12 @@ public class LoginServlet extends HttpServlet {
 		System.out.println(password);
 		authenticate(emailId,password, request, response);
 		
+		//TODO
+		
 		writer.flush();
 		writer.close();
+		
+		
 		
 	}
 
