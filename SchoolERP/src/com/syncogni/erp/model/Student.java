@@ -5,6 +5,8 @@ public class Student {
 	private String name;
 	private String fatherName;
 	private String motherName;
+	private String address;
+	
 
 	public Student() {
 	}
