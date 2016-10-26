@@ -86,6 +86,9 @@ public class RegistrationServlet extends HttpServlet {
 		System.out.println("query="+query);
 		String username = "root";
 		String password = "123456";
+		
+		// Comment from Sagar
+		
 		try {
 
 			Class.forName(driverClass);
