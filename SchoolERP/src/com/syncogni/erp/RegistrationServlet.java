@@ -90,6 +90,7 @@ public class RegistrationServlet extends HttpServlet {
 		// Comment from Sagar
 		
 		
+	
 		try {
 
 			Class.forName(driverClass);
