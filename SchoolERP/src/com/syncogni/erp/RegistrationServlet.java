@@ -56,11 +56,15 @@ public class RegistrationServlet extends HttpServlet {
 //		student.setMotherName(motherName);
 
 		
+		
+		request.setAttribute("student", student);
+		
 		boolean updatedDB = updateDB(student);
 		
 		System.out.println("updatedDB = "+ updatedDB);
 		
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("homepage.html");
+//		RequestDispatcher requestDispatcher = request.getRequestDispatcher("homepage.html");
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("StudentDetails.jsp");
 		requestDispatcher.forward(request, response);
 		
 		writer.flush();
