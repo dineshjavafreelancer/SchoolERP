@@ -5,9 +5,24 @@ table, th, td {
 	
 }
 </style>
+<script>
+function validatePhoneNumber(inputtxt)  
+{  
+	var a = /^(1\s|1|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/.test(inputtxt);
+	if(a == false){alert("Invalid phone number!!! Try again...")}
+	  return a;
+} 
+
+function validateForm()
+{
+	return validatePhoneNumber(document.registrationForm.phoneNumber.value);
+	
+}
+
+</script>
 </head>
 <body>
-	<form method "get" action="RegistrationServlet">
+	<form name = "registrationForm" method="get" onsubmit="return validateForm()" action="RegistrationServlet">
 		<div align="center">
 			<table>
 				<tr>
@@ -44,7 +59,7 @@ table, th, td {
 				</tr>
 				<tr>
 					<td align="right">Mobile no:</td>
-					<td align="left"><input type="text" name="phoneno 1"></td>
+					<td align="left"><input type="text" name="phoneNumber"></td>
 				</tr>
 
 				<tr>
@@ -75,4 +90,6 @@ table, th, td {
 			<button type="button">cancel</button>
 		</div>
 </body>
+
 </html>
+
