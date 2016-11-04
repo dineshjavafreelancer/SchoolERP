@@ -9,3 +9,11 @@ INSERT INTO `schoolerp`.`ids_keeper` (`id`, `id_type`, `LAST_VALUE_GENERATED`) V
 
 UPDATE `schoolerp`.`ids_keeper` SET `LAST_VALUE_GENERATED` = '1' WHERE `id` = '1'; 
 
+CREATE TABLE `schoolerp`.`erp_users` (
+  `ID` INT NOT NULL,
+  `USERNAME` VARCHAR(45) NULL,
+  `PASSWORD` VARCHAR(45) NULL,
+  PRIMARY KEY (`ID`));
+INSERT INTO `schoolerp`.`erp_users` (`ID`, `USERNAME`, `PASSWORD`) VALUES ('1', 'admin@erp.com', 'admin');
+
+commit;
