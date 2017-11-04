@@ -50,15 +50,15 @@ public class StudentServelet extends HttpServlet {
 			try {
 				if (rs != null) {
 					rs.close();
-					rs = null;
+					//rs = null; //unnecessary 
 				}
 				if (stmt != null) {
 					stmt.close();
-					stmt = null;
+					//stmt = null; //unnecessary 
 				}
 				if (con != null) {
 					con.close();
-					con = null;
+					//con = null; //unnecessary 
 				}
 			} catch (SQLException e) {
 			}
